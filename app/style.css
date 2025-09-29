@@ -1,0 +1,410 @@
+@font-face {
+  font-family: "BeautifulNostalgia";
+  src: url("https://cdn.glitch.global/ccf0778d-bb67-46b0-94e9-9b577851564b/Beautiful%20Nostalgia-Personal%20Use.otf?v=1729658823267");
+}
+
+@font-face {
+  font-family: "Germanika";
+  src: url("https://cdn.glitch.global/ccf0778d-bb67-46b0-94e9-9b577851564b/Germanika%20Personal%20Use.ttf?v=1729716829340");
+}
+
+@font-face {
+  font-family: "CityBurn";
+  src: url("https://cdn.glitch.global/ccf0778d-bb67-46b0-94e9-9b577851564b/cityburn-%E2%8C%90.ttf?v=1729718229241");
+}
+
+h1 {
+  font-size: 9vw;
+  color: white;
+  font-family: "Germanika", serif;
+  font-weight: normal;
+}
+
+h1.mindmatter {
+  position: fixed;
+  padding-top: 0px;
+  width: 70vw;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+h1.index {
+  padding-top: 0.75vh;
+  position: fixed;
+  left: 20vw;
+  z-index: 2;
+  text-align: center;
+  right: 20vw;
+}
+
+h1.fugue {
+  font-size: 10vw;
+  position: relative;
+  left: 10vw;
+  text-align: left;
+  width: 80vw;
+  letter-spacing: 2px;
+  z-index: -1;
+}
+
+body {
+  font-family: "CityBurn", sans-serif;
+  background: black;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  bottom: 0px;
+}
+
+body.index {
+  position: relative;
+  height: 170vw;
+  overflow-y: scroll;
+}
+
+body.fugue {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+}
+
+body.mindmatter {
+  position: absolute;
+  display: inline-block;
+  overflow-y: scroll;
+}
+
+p {
+  font-family: "CityBurn", sans-serif;
+  text-align: center;
+  display: block;
+  color: white;
+}
+
+p.hername {
+  position: relative;
+  display: inline-block;
+  font-size: 2vw;
+  color: pink;
+  margin: 0px;
+  padding-top: 2vw;
+  transform: translateY(3vw);
+}
+
+p.artifactdiv {
+  text-align: left;
+  font-size: 1vw;
+  margin: 0px;
+}
+
+p.fugue {
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+p.index {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  font-size: 2vw;
+  text-align: center;
+  z-index: 0;
+}
+
+p.mindmatter {
+  position: absolute;
+  display: flex;
+  font-size: 2vw;
+  background: black;
+  text-align: left;
+  filter: blur(6px);
+}
+
+p.mindmatter:hover {
+  filter: blur(0);
+  transition: filter ease 1s;
+}
+
+p.conclusion {
+  position: relative;
+  display: flex;
+  font-size: 2vw;
+}
+
+p.conclusion2 {
+  position: relative;
+  display: flex;
+  font-size: 1.5vw;
+  text-align: left;
+}
+
+canvas {
+  transition: filter 1s ease;
+  position: absolute;
+  top: 0;
+  border-radius: 15px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 160vw;
+}
+
+canvas:hover {
+  filter: blur(0px);
+}
+
+img.her {
+  position: relative;
+  width: 50vw;
+  height: auto;
+  margin: auto;
+  z-index: -1;
+  display: flex;
+}
+
+img.fugueimg {
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: auto;
+  z-index: -20;
+  filter: blur(8px) brightness(30%);
+  transition: filter 1s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.fugueimg:hover {
+  filter: blur(0) brightness(100%);
+  transition: filter 1s ease;
+}
+
+img.swirl {
+  position: fixed;
+  display: flex;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 0px;
+  width: 70vw;
+  height: auto;
+  z-index: -5;
+  display: grid;
+}
+
+img.artifact {
+  position: absolute;
+  top: -15vw;
+  width: 20vw;
+  height: auto;
+  filter: blur(10px) grayscale(100%);
+  animation: artifactAnim 40s linear infinite;
+}
+
+img.artifact:hover {
+  filter: blur(0px) grayscale(0%);
+  transition: filter ease 1s;
+  z-index: 20;
+}
+
+div.artifactdiv {
+  filter: blur(10px) grayscale(100%);
+  animation: artifactAnim 40s linear infinite;
+  padding: 10px;
+}
+
+img.artifactimg {
+  width: 20vw;
+  height: auto;
+}
+
+div.artifactdiv:hover {
+  filter: blur(0) grayscale(0%);
+  transition: filter ease 1s;
+  z-index: 20;
+}
+
+a.artifactlink {
+  top: -15vw;
+  position: absolute;
+  filter: blur(10px) grayscale(100%);
+}
+
+a.artifactlink:hover {
+  filter: blur(0) grayscale(0%);
+  transition: filter ease 1s;
+  z-index: 20;
+}
+
+a {
+  color: white;
+  text-decoration: underline dotted;
+}
+
+a:hover {
+  color: pink;
+  filter: blur(5px);
+  transition: filter 1s ease;
+}
+
+a.fugue {
+  animation: fugueAnim 5s ease-in-out infinite;
+}
+
+a.fugue:hover {
+  font-style: italic;
+  animation-play-state: paused;
+}
+
+.loop1 {
+  text-wrap: nowrap;
+  display: inline-block;
+  position: absolute;
+  animation: bannerScroll 30s linear infinite;
+  font-size: 2vw;
+  color: pink;
+}
+
+.loop2 {
+  text-wrap: nowrap;
+  display: inline-block;
+  transform: translateX(200%);
+  animation: bannerScroll 30s linear infinite;
+  animation-delay: -15s;
+  font-size: 2vw;
+  color: pink;
+}
+
+div {
+  color: white;
+}
+
+div.fuguedef {
+  font-family: "CityBurn", sans-serif;
+  font-size: 2vw;
+  padding-top: 2vh;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding-left: 10vh;
+}
+
+div.fuguepro {
+  font-family: "CityBurn", sans-serif;
+  font-size: 2vw;
+  padding-top: 2vh;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 2px;
+  padding-left: 10vh;
+}
+
+div.interlude {
+  margin: auto;
+  align-content: center;
+  opacity: 0;
+  height: 60vh;
+  width: 90vw;
+  position: static;
+  z-index: -2;
+  font-size: 7vh;
+}
+
+div.interlude:hover {
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+div.mindmatter {
+  position: relative;
+  display: inline-block;
+  top: 85vh;
+  background: black;
+  text-align: left;
+  width: 85vw;
+  margin: auto;
+}
+
+div.herscroll {
+  display: block;
+  margin-left: auto;
+  margin-right: 3vw;
+  width: 33vw;
+  height: 90vh;
+  overflow-y: scroll;
+  filter: blur(7px) grayscale(100%);
+}
+
+div.herstory {
+  position: absolute;
+  display: block;
+  width: 50vw;
+  margin-left: 3vw;
+  margin-right: auto;
+  height: 90vh;
+}
+
+.deepercontainer {
+  margin: 0px;
+  padding: 0px;
+  transform: translateY(-2vw);
+}
+
+div.herscroll:hover {
+  filter: blur(0px) grayscale(0%);
+  transition: filter 1s ease;
+}
+
+img.herscroll {
+  width: 30vw;
+  height: auto;
+}
+
+@keyframes fugueAnim {
+  0% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@keyframes bannerScroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes artifactAnim {
+  0% {
+    transform: translateY(-100%);
+  }
+  90% {
+    transform: translateY(220vh);
+  }
+  100% {
+    transform: translateY(220vh);
+  }
+}
